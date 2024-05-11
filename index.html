@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente PPGCTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .chat-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003580;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>Assistente PPGCTS</h2>
+        <p>Olá, sou a secretária do PPGCTS e estou aqui para tirar suas dúvidas.</p>
+        <input type="text" id="userInput" placeholder="Digite sua pergunta aqui...">
+        <button onclick="getAnswer()">Enviar Pergunta</button>
+        <textarea id="botResponse" placeholder="Resposta aparecerá aqui..." readonly></textarea>
+    </div>
+
+    <script>
+        function getAnswer() {
+            var input = document.getElementById("userInput").value;
+            var responseArea = document.getElementById("botResponse");
+
+            // Aqui você integraria a chamada para o seu chatbot
+            // Por ora, vamos apenas ecoar a pergunta como uma resposta simples
+            responseArea.value = "Você perguntou: " + input + "\nAinda não posso responder, mas em breve poderei!";
+        }
+    </script>
+</body>
+</html>
